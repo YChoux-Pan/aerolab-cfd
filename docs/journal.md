@@ -2,6 +2,24 @@
 
 Reverse-chronological. Record decisions, evidence, and unresolved risks.
 
+## 2026-11-11 — v1.0.0 shipped
+
+- Repository: <https://github.com/YChoux-Pan/aerolab-cfd>
+- Release: <https://github.com/YChoux-Pan/aerolab-cfd/releases/tag/v1.0.0>
+- Asset: `aerolab-cfd-plugin-v1.0.0.zip` (201,933 bytes)
+- CI: run `42980764039` passed.
+- Release workflow: run `42981032172` passed.
+- New plugin row `aerolab-cfd` installed and active in the local `desktop`
+  profile; the previous `aeroflow-lab` row was disabled.
+- A headless React + Edge/SwiftShader render of the actual workspace components
+  produced `docs/images/aerolab-cfd-workspace.png`. The same harness exercised
+  streamlines and velocity/pressure slices.
+- Automated repository verification: 45/45 checks.
+
+**Remaining manual check:** refresh DSH and inspect the actual slot layout,
+keyboard/focus behavior and GPU cost. The component harness validates rendering,
+not the host page's auth/session environment.
+
 ## 2026-11-11 — AeroLab CFD v1.0.0 from the V2 requirements
 
 **Decision:** replace the previous AeroFlow presentation with a new DSH Web UI
