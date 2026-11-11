@@ -1,0 +1,26 @@
+# Dependencies and generated tooling
+node_modules/
+.pnpm-store/
+plugin/tools/node_modules/
+.tmp/
+*.log
+
+# OS and editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# Local runtime artifacts
+*.pem
+.env
+.env.*
+!.env.example
+
+# Test outputs that are not deliverables
+coverage/
+playwright-report/
+test-results/
+dist/

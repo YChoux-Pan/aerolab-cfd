@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: plugin/tools/pnpm-lock.yaml
+      - name: Install build dependencies
+        working-directory: plugin/tools
+        run: pnpm install --frozen-lockfile
+      - name: Rebuild client bundle
+        working-directory: plugin/tools
+        run: node build.mjs
+      - name: Check committed bundle is current
+        run: git diff --exit-code -- plugin/client.js
+      - name: Check JavaScript syntax
+        run: node --check plugin/client.js
+      - name: Repository verification
+        run: node scripts/verify.mjs
+      - name: Package installable plugin
+        run: node scripts/package-plugin.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: aerolab-cfd-plugin
+          path: dist/aerolab-cfd-plugin-v*.zip
+          if-no-files-found: error

@@ -1,0 +1,11 @@
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.glb binary
+*.mp4 binary
+
+plugin/client.js linguist-generated=true
+plugin/tools/pnpm-lock.yaml linguist-generated=true

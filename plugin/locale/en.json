@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "title": "AeroLab CFD",
+    "description": "Interactive virtual wind tunnel and CFD workspace: import STL/OBJ, set the freestream and mesh, preview streamlines, velocity/pressure contours, vorticity and forces, then export the project and report."
+  },
+  "launcher.kicker": "AEROLAB CFD",
+  "launcher.title": "AeroLab CFD",
+  "launcher.desc": "Virtual tunnel · streamlines · force preview",
+  "launcher.open": "Open workspace",
+  "launcher.live": "READY",
+  "launcher.article": "ARTICLE",
+  "launcher.wind": "INLET",
+  "lab.close": "Close AeroLab CFD"
+}

@@ -1,0 +1,44 @@
+{
+  "name": "aerolab-cfd",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AeroLab CFD — an interactive virtual wind tunnel and CFD workspace for the DSH Web UI. STL/OBJ import, streamlines, contours, residual curves, force estimates and report export.",
+  "type": "module",
+  "license": "MIT",
+  "author": "YChoux-Pan",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YChoux-Pan/aerolab-cfd.git",
+    "directory": "plugin"
+  },
+  "homepage": "https://github.com/YChoux-Pan/aerolab-cfd",
+  "bugs": {
+    "url": "https://github.com/YChoux-Pan/aerolab-cfd/issues"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "LICENSE",
+    "README.md",
+    "THIRD_PARTY_NOTICES.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": ["@deepseek-ai/dsh-client-ui-conversation"]
+    }
+  }
+}

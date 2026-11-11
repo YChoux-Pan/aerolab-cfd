@@ -1,0 +1,16 @@
+{
+  "name": "aerolab-cfd-tools",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Build workspace for the AeroLab CFD DSH plugin.",
+  "scripts": {
+    "build": "node build.mjs"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.0",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "three": "0.180.0"
+  }
+}

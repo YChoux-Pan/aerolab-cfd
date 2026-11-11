@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "title": "AeroLab CFD",
+    "description": "交互式虚拟风洞与 CFD 工作台：导入 STL/OBJ，设置来流与网格，预览流线、速度/压力云图、涡量和气动力，导出工程与报告。"
+  },
+  "launcher.kicker": "AEROLAB CFD",
+  "launcher.title": "AeroLab CFD",
+  "launcher.desc": "交互式风洞 · 流线/云图 · 气动力预览",
+  "launcher.open": "进入工作台",
+  "launcher.live": "就绪",
+  "launcher.article": "测试件",
+  "launcher.wind": "入口风速",
+  "lab.close": "关闭 AeroLab CFD"
+}

@@ -1,0 +1,50 @@
+name: Release plugin
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: plugin/tools/pnpm-lock.yaml
+      - name: Install build dependencies
+        working-directory: plugin/tools
+        run: pnpm install --frozen-lockfile
+      - name: Build client
+        working-directory: plugin/tools
+        run: node build.mjs
+      - name: Verify and package
+        run: |
+          node scripts/verify.mjs
+          node scripts/package-plugin.mjs
+      - name: Create GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: AeroLab CFD ${{ github.ref_name }}
+          body: |
+            AeroLab CFD — interactive virtual wind tunnel / CFD preview workspace
+            for the DSH Web UI.
+
+            Extract the attached zip, then select the extracted `aerolab-cfd/`
+            folder in DSH Plugins and enable the bundle. You can also clone the
+            repository and select `plugin/`.
+
+            This is a reduced-order interactive preview, not OpenFOAM and not a
+            validated CFD solver. See `docs/preview-model.md`.
+          files: |
+            dist/aerolab-cfd-plugin-v*.zip
+            plugin/THIRD_PARTY_NOTICES.md
+          fail_on_unmatched_files: true
