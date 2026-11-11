@@ -14,6 +14,9 @@ Reverse-chronological. Record decisions, evidence, and unresolved risks.
   asserts both slot registrations. Wired into CI and release.
 - Verified locally: `ACTIVATED 2 conversation.input.dock:aerolab-cfd-launcher,
   shell.overlay:aerolab-cfd-app`.
+- CI run `42983596205` passed, including the new activation smoke step.
+- Release run `42983691527` published `v1.0.1` with
+  `aerolab-cfd-plugin-v1.0.1.zip` (202,393 bytes).
 - Action: refresh DSH; if the web boot already failed, restart DSH so the fixed
   client bundle is loaded.
 
