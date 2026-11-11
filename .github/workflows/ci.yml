@@ -31,6 +31,9 @@ jobs:
       - name: Rebuild client bundle
         working-directory: plugin/tools
         run: node build.mjs
+      - name: Activation smoke test
+        working-directory: plugin/tools
+        run: node activation-smoke.mjs
       - name: Check committed bundle is current
         run: git diff --exit-code -- plugin/client.js
       - name: Check JavaScript syntax

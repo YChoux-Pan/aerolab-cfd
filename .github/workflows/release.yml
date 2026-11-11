@@ -26,6 +26,9 @@ jobs:
       - name: Build client
         working-directory: plugin/tools
         run: node build.mjs
+      - name: Activation smoke test
+        working-directory: plugin/tools
+        run: node activation-smoke.mjs
       - name: Verify and package
         run: |
           node scripts/verify.mjs

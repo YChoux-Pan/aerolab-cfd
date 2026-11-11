@@ -2,6 +2,21 @@
 
 Reverse-chronological. Record decisions, evidence, and unresolved risks.
 
+## 2026-11-11 — v1.0.1 activation hotfix
+
+- DSH web boot reported `aerolab-cfd: failed` and no launcher appeared.
+- Root cause: `client.jsx` registered `en`/`zh` but never imported the locale
+  JSON names. The component harness had called `buildComponents` directly and
+  bypassed `plugin.apply`, so the undefined activation symbols were invisible.
+- Fix: import `../locale/en.json` and `../locale/zh.json`; bump to 1.0.1.
+- Added `plugin/tools/activation-smoke.mjs`, which runs the built bundle in a
+  browser-like VM, calls the module-loader factory and `plugin.apply()`, and
+  asserts both slot registrations. Wired into CI and release.
+- Verified locally: `ACTIVATED 2 conversation.input.dock:aerolab-cfd-launcher,
+  shell.overlay:aerolab-cfd-app`.
+- Action: refresh DSH; if the web boot already failed, restart DSH so the fixed
+  client bundle is loaded.
+
 ## 2026-11-11 — v1.0.0 shipped
 
 - Repository: <https://github.com/YChoux-Pan/aerolab-cfd>

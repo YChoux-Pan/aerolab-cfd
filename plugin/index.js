@@ -1,2 +1,2 @@
-/** Host half of AeroFlow Lab. The Client module owns the 3D wind tunnel. */
+/** Host half of AeroLab CFD. The Client module owns the virtual wind tunnel. */
 export function apply() {}

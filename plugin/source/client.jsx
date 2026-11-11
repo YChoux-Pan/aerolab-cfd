@@ -1,3 +1,5 @@
+import en from '../locale/en.json';
+import zh from '../locale/zh.json';
 import {
   DEFAULT_SPEC,
   DEFAULT_VIZ,
@@ -866,7 +868,7 @@ export function buildComponents(ctx) {
       }
       if (modal.type === 'about') {
         return (
-          <Modal title="AeroLab CFD" subtitle="Version 1.0.0 · DSH Web UI plugin" onClose={() => setModal(null)}>
+          <Modal title="AeroLab CFD" subtitle="Version 1.0.1 · DSH Web UI plugin" onClose={() => setModal(null)}>
             <div className="ac-about-hero"><Logo size={58} /><div><h2>AeroLab CFD</h2><p>交互式虚拟风洞 / CFD 工作台</p></div></div>
             <p className="ac-about-copy">本项目把 MD 方案中的项目树、边界条件、网格、求解、后处理与残差诊断，做成 DSH Web UI 里的可视化插件。它不启动本地 OpenFOAM 进程，也不宣称结果是经验证的 CFD。</p>
             <div className="ac-about-tags"><span>STL / OBJ / GLB</span><span>Streamlines</span><span>Velocity / Pressure</span><span>Vorticity</span><span>CSV / Markdown report</span></div>
@@ -905,7 +907,7 @@ export function buildComponents(ctx) {
                 </div>
               ))}
             </nav>
-            <div className="ac-title-right"><span className="ac-project-name">{projectName}</span><span className="ac-version">v1.0.0</span>
+            <div className="ac-title-right"><span className="ac-project-name">{projectName}</span><span className="ac-version">v1.0.1</span>
               <div className="ac-window-buttons"><button type="button" className="ac-icon-btn" aria-label="最小化"><span>—</span></button><button type="button" className="ac-icon-btn" aria-label="最大化"><span>▢</span></button><button type="button" className="ac-icon-btn is-close" onClick={() => setLabOpen(false)} aria-label="关闭"><Icon name="close" size={16} /></button></div>
             </div>
           </header>
@@ -1066,7 +1068,7 @@ export function buildComponents(ctx) {
             <div className="ac-status-item">耗时 <strong>{formatDuration(solver.elapsedSeconds)}</strong></div>
             <div className="ac-status-item">网格单元 <strong>{mesh.cells ? mesh.cells.toLocaleString('en-US') : '—'}</strong></div>
             <div className="ac-status-item">网格质量 <strong>{mesh.quality}</strong></div>
-            <div className="ac-status-right"><button type="button" onClick={() => setModal({ type: 'logs' })}><Icon name="log" size={12} />求解日志</button><span>AeroLab CFD v1.0.0 · Preview</span></div>
+            <div className="ac-status-right"><button type="button" onClick={() => setModal({ type: 'logs' })}><Icon name="log" size={12} />求解日志</button><span>AeroLab CFD v1.0.1 · Preview</span></div>
           </footer>
         </div>
 

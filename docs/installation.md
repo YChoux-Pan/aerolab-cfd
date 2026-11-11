@@ -10,7 +10,7 @@ AeroLab CFD is a **DSH Web UI bundle**, not a standalone desktop executable.
 
 ## Install from a release zip
 
-1. Download `aerolab-cfd-plugin-v1.0.0.zip` from the repository Releases page.
+1. Download `aerolab-cfd-plugin-v1.0.1.zip` from the repository Releases page.
 2. Extract it. The zip contains a top-level `aerolab-cfd/` folder.
 3. In DSH open **Plugins** → local bundle → select the extracted `aerolab-cfd/` folder.
 4. Enable **AeroLab CFD** (`aerolab-cfd`).

@@ -3,6 +3,18 @@
 All notable changes to AeroLab CFD are recorded here. The installable plugin
 uses semantic versioning.
 
+## [1.0.1] — 2026-11-11
+
+### Fixed
+
+- Client activation failed with `en is not defined` because the locale
+  dictionaries were not imported in `client.jsx`. This prevented every slot from
+  registering, so the launcher never appeared.
+- Added a committed activation smoke test that loads `client.js` in a
+  browser-like VM, calls the DSH module loader and `plugin.apply()`, and asserts
+  both slot registrations. CI and the release workflow now run it.
+- Updated the displayed version to 1.0.1 and the release instructions.
+
 ## [1.0.0] — 2026-11-11
 
 ### Added
@@ -30,4 +42,5 @@ uses semantic versioning.
 - This is a reduced-order interactive preview, not OpenFOAM and not a validated
   CFD result. See `docs/preview-model.md`.
 
+[1.0.1]: https://github.com/YChoux-Pan/aerolab-cfd/releases/tag/v1.0.1
 [1.0.0]: https://github.com/YChoux-Pan/aerolab-cfd/releases/tag/v1.0.0

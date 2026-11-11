@@ -22,7 +22,7 @@ source; rebuild `plugin/client.js` when source files change and refresh DSH.
 
 ## Release-based deployment
 
-Download `aerolab-cfd-plugin-v1.0.0.zip` from Releases. Extract it and select the
+Download `aerolab-cfd-plugin-v1.0.1.zip` from Releases. Extract it and select the
 extracted `aerolab-cfd/` folder in DSH Plugins. The zip contains only runtime
 files: `client.js`, `package.json`, `cordis.patch.yml`, `index.js`, locale JSON,
 icon and notices.

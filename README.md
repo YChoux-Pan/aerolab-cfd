@@ -42,7 +42,7 @@ dsh plugin --profile desktop add "<absolute-path>/aerolab-cfd/plugin"
 
 ### Option B — release zip
 
-Download `aerolab-cfd-plugin-v1.0.0.zip` from the [Releases](https://github.com/YChoux-Pan/aerolab-cfd/releases) page, extract it, then select the extracted `aerolab-cfd/` folder in DSH Plugins and enable the bundle.
+Download `aerolab-cfd-plugin-v1.0.1.zip` from the [Releases](https://github.com/YChoux-Pan/aerolab-cfd/releases) page, extract it, then select the extracted `aerolab-cfd/` folder in DSH Plugins and enable the bundle.
 
 ### Option C — helper script
 

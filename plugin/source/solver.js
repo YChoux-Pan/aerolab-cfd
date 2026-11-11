@@ -5,7 +5,7 @@
  * and not a Navier–Stokes solution. The UI labels it as a preview so numbers
  * are useful for interaction design and demos, not engineering sign-off.
  */
-export const VERSION = '1.0.0';
+export const VERSION = '1.0.1';
 
 export const DEMO_GEOMETRY = {
   name: 'Car_Body.STL',

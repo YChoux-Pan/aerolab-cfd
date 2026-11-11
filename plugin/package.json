@@ -1,6 +1,6 @@
 {
   "name": "aerolab-cfd",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "description": "AeroLab CFD — an interactive virtual wind tunnel and CFD workspace for the DSH Web UI. STL/OBJ import, streamlines, contours, residual curves, force estimates and report export.",
   "type": "module",
